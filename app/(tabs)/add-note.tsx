@@ -4,7 +4,6 @@ import { Platform, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'r
 import { v4 as uuidv4 } from 'uuid';
 import { PRIORITIES } from '../constants/priority';
 
-// Wrapper localStorage "AsyncStorage-like"
 const storage = {
   getItem: async (key: string) => {
     return Promise.resolve(localStorage.getItem(key));
@@ -93,6 +92,7 @@ const styles = StyleSheet.create({
   input: {
     borderWidth: 1,
     borderColor: '#ccc',
+    color: '#fff',
     padding: 10,
     borderRadius: 6,
     marginTop: 4,
@@ -103,12 +103,15 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     marginTop: 4,
     overflow: 'hidden',
+    color: '#000',
   },
   webSelect: {
     width: '100%',
     height: 40,
     fontSize: 16,
     paddingLeft: 10,
+    backgroundColor: '#000',
+    color: '#fff',
     border: 'none',
     outline: 'none',
     appearance: 'none',
@@ -116,7 +119,7 @@ const styles = StyleSheet.create({
   mobileFallback: {
     padding: 10,
     fontStyle: 'italic',
-    color: '#888',
+    color: '#000',
   },
   saveButton: {
     marginTop: 24,

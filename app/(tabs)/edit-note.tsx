@@ -1,13 +1,13 @@
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useEffect, useState } from 'react';
 import {
-    Alert,
-    Platform,
-    StyleSheet,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    View,
+  Alert,
+  Platform,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
 } from 'react-native';
 import { PRIORITIES } from '../constants/priority';
 
@@ -146,6 +146,7 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 6,
     marginTop: 4,
+    color: '#fff',
   },
   pickerWrapper: {
     marginTop: 4,
