@@ -1,53 +1,103 @@
-> Edited for use in IDX on 07/09/12
+# 📱 myNotes
 
-# Welcome to your Expo app 👋
+**myNotes** is a mobile-first note-taking application built with **React Native** and **Expo Router**.  
+It allows users to create, edit, and delete personal notes stored **locally** on the device (no cloud), respecting **RGPD** compliance.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+---
 
-## Get started
+## 🚀 Features
 
-#### Android
+- 📌 Create, view, edit, and delete notes  
+- 🗂️ Note priority levels (Important, Normal, Memo)  
+- 💾 Local data persistence with `AsyncStorage`  
+- 📱 Responsive UI (mobile/tablet, light)  
+- 🔁 Expo Router-based navigation  
+- 🌐 Works with Expo Go or Web
 
-Android previews are defined as a `workspace.onStart` hook and started as a vscode task when the workspace is opened/started.
+---
 
-Note, if you can't find the task, either:
-- Rebuild the environment (using command palette: `IDX: Rebuild Environment`), or
-- Run `npm run android -- --tunnel` command manually run android and see the output in your terminal. The device should pick up this new command and switch to start displaying the output from it.
+## 📦 Installation
 
-In the output of this command/task, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You'll also find options to open the app's developer menu, reload the app, and more.
-
-#### Web
-
-Web previews will be started and managred automatically. Use the toolbar to manually refresh.
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+### 1. Clone the repository
 
 ```bash
-npm run reset-project
+git clone https://github.com/Matthieu-Wivers/Project4---MyNotes.git
+cd Project4---MyNotes
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2. Install dependencies
 
-## Learn more
+```bash
+npm install
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+### 3. Create entry point if missing
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Make sure a `index.js` file exists at the root with:
 
-## Join the community
+```js
+import 'expo-router/entry';
+```
 
-Join our community of developers creating universal apps.
+### 4. Start the development server
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+npx expo start
+```
+
+To preview on web:
+
+```bash
+npx expo start --web
+```
+
+> 💡 You can scan the QR code with the **Expo Go** app on your mobile.
+
+---
+
+## 🧱 Project Structure
+
+```
+myNotes/
+├── app/
+│   ├── index.tsx         # Notes dashboard
+│   ├── add-note.tsx      # Add a note
+│   ├── edit-note.tsx     # Edit/delete a note
+│   └── (tabs)/_layout.tsx # Tab navigation layout
+├── constants/
+│   └── priority.ts       # Priority colors and labels
+├── index.js              # Expo entry point (expo-router)
+├── package.json
+└── app.json
+```
+
+---
+
+## ✅ Requirements
+
+- Node.js ≥ 18  
+- `npx` or `expo-cli`  
+- A mobile device with Expo Go or a simulator
+
+---
+
+## 🧠 Tech Stack
+
+- [React Native](https://reactnative.dev/)  
+- [Expo](https://expo.dev/)  
+- [Expo Router](https://expo.github.io/router/)  
+- [AsyncStorage](https://react-native-async-storage.github.io/async-storage/)
+
+---
+
+## 📸 Screenshots
+
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+
+---
+
+## © 2025 Matthieu GANET
+
+Project created as part of a school assignment at L'École Multimédia.
